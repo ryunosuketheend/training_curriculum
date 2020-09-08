@@ -1,8 +1,7 @@
 class CalendarsController < ApplicationController
-
+    before_action :get_week, only: [:index]
   # １週間のカレンダーと予定が表示されるページ
   def index
-    get_week
     @plan = Plan.new
   end
 
